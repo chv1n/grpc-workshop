@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package balance;
 
-option go_package = "./go-server/pb;balance";
+option go_package = "./pb;balance";
 
 // กำหนด Service และ Method ที่สามารถเรียกใช้ได้
 service BalanceService {
