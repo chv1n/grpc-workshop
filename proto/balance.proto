@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package balance;
+
+option go_package = "./go-server/pb;balance";
+
+// กำหนด Service และ Method ที่สามารถเรียกใช้ได้
+service BalanceService {
+  rpc GetBalance (BalanceRequest) returns (BalanceResponse);
+}
+
+// โครงสร้างข้อมูลขาไป
+message BalanceRequest {
+  string user_id = 1;
+}
+
+// โครงสร้างข้อมูลขากลับ
+message BalanceResponse {
+  double amount = 1;
+  string currency = 2;
+}
